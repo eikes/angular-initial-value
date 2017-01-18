@@ -8,10 +8,10 @@
 
         var element = $element[0],
             tag = element.tagName.toLowerCase(),
-            type = $element.attr('type').toLowerCase(),
             value = $element.val();
 
         if (tag === 'input') {
+          var type = $element.attr('type').toLowerCase();
           if (type === 'checkbox' || type === 'radio') {
             value = $element.prop('checked');
           } else if (type === 'number') {
